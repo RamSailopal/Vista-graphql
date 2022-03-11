@@ -10,7 +10,7 @@ With GraphQL, queries can further be refined to attain the exact data required.
 
 # Backend resolvers
 
-Two approaches we used:
+Two approaches are used:
 
 1) A simple call to the nodevista fmql endpoint (In this demonstration case, querying patients)
 2) MongoDB as a JSON store which contains the data from the fmql endpoints.
