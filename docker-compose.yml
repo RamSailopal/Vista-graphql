@@ -1,0 +1,52 @@
+#
+#       AUTHOR - Raman Sailopal
+#
+#       docker compose yml file for the YottaDB-Dashboard stack
+#
+version: "2"
+services:
+ nodevista:
+   image: docker.io/vistadataproject/nodevista999
+   hostname: nodevista
+   ports:
+      - 9330:9430 
+      - 32:22 
+      - 9100:9000 
+      - 9331:8001
+   networks:
+      - yottanet
+
+
+ node:
+   image: docker.io/owncloudci/nodejs
+   hostname: node
+   ports:
+      - 5000:5000
+   networks:
+      - yottanet
+   volumes:
+      - $PWD/code:/home/node
+
+   entrypoint: [ "/bin/bash", "-c", "cd /home/node && npm install && npm run devStart" ]
+
+ mongo:
+    image: mongo
+    hostname: mongodb
+    restart: always
+    networks:
+       - yottanet
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: mongo
+
+ python:
+    image: python
+    hostname: python
+    networks:
+       - yottanet
+    volumes:
+      - $PWD/pythoncode:/home/python
+    entrypoint: [ "/bin/bash", "-c", "cd /home/python && python3 -m pip install requests pymongo && python3 sync.py && tail -f /dev/null" ]
+
+networks:
+    yottanet:

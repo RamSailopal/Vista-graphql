@@ -1,0 +1,23 @@
+{
+    "name": "current-project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "devStart": "nodemon server.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.26.0",
+        "bson": "^4.6.1",
+        "express": "^4.16.4",
+        "express-graphql": "^0.7.1",
+        "graphql": "^14.1.1",
+        "mongodb": "^1.4.40",
+        "monk": "^7.3.4"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.10"
+    }
+}
