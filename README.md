@@ -20,7 +20,7 @@ Two approaches are used:
 1) Patients - Returns data for all patients using the REST API endpoint
 2) Patient - Returns data for patients using the REST API endpoint, based on a passed name argument
 3) Patients1 - Returns data for all patients using mongodb 
-4) Patient1 - Returns data for patients using mongob, based on a passed name argument
+4) Patient1 - Returns data for patients using mongodb, based on a passed name argument
 
 # Schema
 
