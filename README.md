@@ -1,5 +1,7 @@
 # Vista-graphql
 
+![Alt text](vista-graphql.webp?raw=true "Graphql")
+
 A demonstration of GraphQL alongside nodeVISTA
 
 nodeVISTA represents a layer of abstraction away from the core VistA system that allows FileMan queries to be run and returned as JSON
