@@ -97,19 +97,6 @@ const SexType = new GraphQLObjectType({
 })
 
 
-const TodoType = new GraphQLObjectType({
-  name: 'Todos',
-  description: 'This represents a list of todos',
-  fields: () => ({
-    id: { type: new GraphQLNonNull(GraphQLInt) },
-    title: { type: new GraphQLNonNull(GraphQLString) },
-    todos: {
-      type: TodoType,
-      resolve: todos => todos.map(GetToDos),
-    }
-  })
-})
-
 const RootQueryType = new GraphQLObjectType({
   name: 'Query',
   description: 'Root Query',
