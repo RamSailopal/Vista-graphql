@@ -1,7 +1,7 @@
 #
 #       AUTHOR - Raman Sailopal
 #
-#       docker compose yml file for the YottaDB-Dashboard stack
+#       docker compose yml file for the NodeVistA/Graphql stack
 #
 version: "2"
 services:
