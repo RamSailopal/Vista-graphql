@@ -34,6 +34,8 @@ The following fields have been setup to be interogated:
 
 # Gitpod
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/RamSailopal/Vista-graphql)
+
 To run a Gitpod with this repo:
 
 1) Create a free/paid Gitpod account - https://www.gitpod.io/
